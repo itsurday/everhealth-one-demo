@@ -4,6 +4,12 @@ A portfolio Salesforce build: Zuora-shaped quoting, an async billing sync that s
 
 > **Fictional and simulated.** Not an EverCommerce product; built without access to any EverCommerce system. **Zuora (CPQ X + Billing), HubSpot, ChurnZero, Gong, Outreach, ZoomInfo and Chili Piper are simulated:** no vendor packages. Synthetic data only: no PHI, no payment data.
 
+## Reviewing in 5 minutes
+1. **Watch** the [1:50 demo video](#demo-video) and skim the [screenshots](#screenshots).
+2. **Read the design:** [architecture and ADRs](docs/STA.md) and [JD traceability](docs/PRD.md#2-jd-traceability).
+3. **Read the code:** [BillingSyncService.cls](force-app/main/default/classes/BillingSyncService.cls) (async, idempotent sync with bounded retry) and [BillingEventsResource.cls](force-app/main/default/classes/BillingEventsResource.cls) (REST intake with dedupe and stale-event handling), with their `*_Test.cls` files.
+4. **Check the governance:** [CI workflow](.github/workflows/ci.yml), [rollback-note check](scripts/check-rollback-note.sh), [change management](docs/CHANGE_MANAGEMENT.md), [AI log](docs/AI_LOG.md).
+
 ## What it shows
 | Area | In this repo |
 |---|---|
@@ -65,19 +71,10 @@ Quote templates can't be deployed as metadata, so build it once per org (about 5
 
 Demo users are created by the script: **Sam Sales** (sales user, can't see or retry integration logs) and **Morgan Manager** (discount approver). Open as either with `sf org open -o <username>`.
 
-## Demo (5–7 minutes)
-1. **Quote:** Willow Creek's quote has a 20% discount → pending Morgan's approval (threshold 15% in `Q2C_Setting__mdt`); the validation rule blocks acceptance until approved. Generate the PDF from the template.
-2. **Sync:** accept a quote → async sync → the quote shows *Synced* and links a Billing Subscription with a Zuora-style number.
-3. **Duplicate event:** `scripts/send-billing-event.sh eh-demo` posts the same billing event twice → first `processed`, then `duplicate` with the same correlation id; the log shows `Duplicate Count = 1`.
-4. **Failure + retry:** Northgate's sync is *Exhausted* (rate limited). As an operator: **Retry Sync** → *Succeeded*. As Sam Sales: no access. Or set `Integration_Config__mdt.Zuora_Billing.Fail_Mode__c` = RateLimit and accept a quote to watch a live failure.
-5. **Renewals and amendments:** the daily flow (6:00 AM CST) creates Renewal Opportunities for subscriptions ending within 90 days (*EH Renewals Due*). On any subscription, **Amend / Renew** builds an Amendment (co-termed) or Renewal quote pre-filled with the current recurring charges.
-6. **Reconciliation:** the daily job flagged Pinecrest: `Mismatch: MRR Salesforce 766.00 vs billing 841.00` (an uplift applied "directly in Zuora"). Edit any record on the *Zuora Subscription (Simulated)* tab, then run `BillingReconciliationJob.run()` from Execute Anonymous to see a new one.
-7. **Data quality:** *EH Data Quality* dashboard; create "Lakeside Dental Group" again to see the duplicate alert.
-8. **Repo:** `/impact Account.Lifecycle_Stage__c`, [generated field inventory](docs/generated/FIELD_INVENTORY.md), the rollback-note PR check ([script](scripts/check-rollback-note.sh), 8 self-test cases), [AI log](docs/AI_LOG.md).
-
 ## Quality
-- 60 Apex tests, 97% org-wide coverage (positive, negative, bulk, permission); Code Analyzer with no severity 1–2 findings.
-- Script self-tests: rollback-note check (8 cases), doc generator and `/impact` (5 cases).
+- 60 Apex tests, 97% org-wide coverage (positive, negative, bulk, permission), measured in the scratch org with `sf apex run test --test-level RunLocalTests --code-coverage`.
+- CI runs on every push and PR: Code Analyzer (fails on severity 1–2), script self-tests (rollback-note check: 8 cases; doc generator and `/impact`: 5 cases), and a check that generated docs are current.
+- The CI job that validates the deploy and runs the Apex tests in a throwaway scratch org needs a `DEVHUB_SFDX_AUTH_URL` secret. This public copy has no Dev Hub connected, so that job is skipped here and shows a warning.
 
 ## Repo map
 ```text

@@ -47,7 +47,7 @@ Every item below was caught by a guardrail (deploy validation, tests, Code Analy
 ## Practices that kept AI output safe
 - **Specs first:** PRD/STA/Data Model reviewed by the human before any metadata was generated.
 - **Generated, then validated:** every generated file went through a real deploy to a scratch org before commit.
-- **Tests first for Apex:** test classes written before implementations; 46 Apex tests, 98% coverage, bulk and permission cases.
+- **Tests first for Apex:** test classes written before implementations; 60 Apex tests at release, 97% org-wide coverage, bulk and permission cases.
 - **Live verification:** each task smoke-tested in the org (sync, duplicate event via REST, renewal run, non-operator blocked), then test records deleted.
 - **No secrets:** secret scan before each push; credentials only in Named/External Credentials.
 - **Human gates:** the human approved the plan, chose the org strategy and publishing approach, and merged every PR.

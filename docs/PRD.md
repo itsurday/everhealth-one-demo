@@ -23,7 +23,7 @@ Source: EverHealth job posting R-106638 (Sr Salesforce Administrator / Architect
 | GTM stack: mappings, sync rules, lifecycle logic | `Field_Mapping__mdt`; sync-rules matrix (direction, winning system, conflict rule, lifecycle mapping) for HubSpot/ChurnZero/Gong/Outreach/ZoomInfo/Chili Piper |
 | Data Loader, data-quality standards + monitoring | Data Loader–format CSVs, upsert on External IDs; duplicate/matching rules; completeness formula; Data Quality dashboard; bulk-op runbook |
 | AI solutions with outcomes; Claude Code | `CLAUDE.md`; `.claude/commands/` (`/impact`, `/release-notes`, `/metadata-review`); `docs/AI_LOG.md` (task, result, time saved) |
-| Living docs + rollback notes | Generator builds field inventory, Flow catalog and report index from metadata; 4 runbooks |
+| Living docs + rollback notes | Generator builds field inventory, Flow catalog and report index from metadata; 5 runbooks |
 | Reporting / dashboards (BI as needed) | 4 dashboards; Looker/Tableau out of scope |
 | Nice-to-have: Apex/SOQL | Small layered Apex, ≥85% coverage |
 | Nice-to-have: healthcare / regulated data | Fictional practice-management SaaS customers; no PHI; field sensitivity labels in the field inventory |
