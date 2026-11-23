@@ -19,7 +19,7 @@ A portfolio Salesforce build: Zuora-shaped quoting, an async billing sync that s
 Full JD traceability: [docs/PRD.md §2](docs/PRD.md#2-jd-traceability).
 
 ## Demo video
-https://github.com/user-attachments/assets/d4c883d1-c277-4e61-a5f5-c929bf03dd9c
+https://github.com/user-attachments/assets/ee866894-87a4-4950-841e-be9d920c431b
 
 Full-quality file: [video/brag.mp4](video/brag.mp4) (download).
 
