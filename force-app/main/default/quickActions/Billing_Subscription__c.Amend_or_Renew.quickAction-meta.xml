@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Start an Amendment or Renewal quote from this subscription (screen flow EH_Amend_Renew_Subscription).</description>
+    <flowDefinition>EH_Amend_Renew_Subscription</flowDefinition>
+    <label>Amend / Renew</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

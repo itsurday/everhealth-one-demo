@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>ChurnZero_Health_Score__c</fullName><label>ChurnZero Health Score</label><description>Inbound from ChurnZero only (ADR-004). Read-only on layouts.</description><precision>3</precision><scale>0</scale><type>Number</type><securityClassification>Confidential</securityClassification></CustomField>

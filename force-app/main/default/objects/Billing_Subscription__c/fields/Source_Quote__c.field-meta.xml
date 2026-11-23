@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Source_Quote__c</fullName><label>Source Quote</label><description>Originating quote.</description><referenceTo>Quote</referenceTo><relationshipName>Billing_Subscriptions</relationshipName><relationshipLabel>Billing Subscriptions</relationshipLabel><deleteConstraint>SetNull</deleteConstraint><type>Lookup</type><securityClassification>Internal</securityClassification></CustomField>

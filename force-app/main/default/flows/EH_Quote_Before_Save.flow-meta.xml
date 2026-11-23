@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <assignments>
+        <name>Set_Quote_Type</name>
+        <label>Set Quote Type</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Quote_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>QuoteTypeFromRecordType</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Only owner of Quote_Type__c defaulting (STA §4). Before-save on create: Opportunity record type New Business -&gt; New, Amendment -&gt; Amend, Renewal -&gt; Renew.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>QuoteTypeFromRecordType</name>
+        <dataType>String</dataType>
+        <expression>CASE({!$Record.Opportunity.RecordType.DeveloperName}, &apos;Amendment&apos;, &apos;Amend&apos;, &apos;Renewal&apos;, &apos;Renew&apos;, &apos;New&apos;)</expression>
+    </formulas>
+    <interviewLabel>EH Quote Before Save {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EH Quote Before Save</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Quote_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Quote_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Quote</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

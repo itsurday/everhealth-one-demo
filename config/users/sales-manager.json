@@ -1,0 +1,9 @@
+{
+  "FirstName": "Morgan",
+  "LastName": "Manager (demo)",
+  "Alias": "mmgr",
+  "Email": "morgan.manager@example.com",
+  "profileName": "Standard User",
+  "permsets": ["EH_Sales_Manager", "EH_Billing_Viewer"],
+  "generatePassword": true
+}

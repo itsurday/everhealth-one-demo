@@ -1,0 +1,11 @@
+Account_Key__c,Name,Website,Phone,BillingCity,BillingState,BillingCountry,Practice_Type__c,Lifecycle_Stage__c,HubSpot_Company_Id__c,ChurnZero_Account_Id__c
+ACC-0001,Lakeside Dental Group,https://lakeside-dental.example.com,555-0101,Madison,WI,US,Dental,Prospect,HS-1001,CZ-2001
+ACC-0002,Riverbend Chiropractic,https://riverbend-chiro.example.com,555-0102,Des Moines,IA,US,Chiropractic,Prospect,HS-1002,CZ-2002
+ACC-0003,Summit Physical Therapy,https://summit-pt.example.com,555-0103,Boulder,CO,US,Physical Therapy,Prospect,HS-1003,CZ-2003
+ACC-0004,Harbor Behavioral Health,https://harbor-bh.example.com,555-0104,Portland,ME,US,Behavioral Health,Prospect,HS-1004,CZ-2004
+ACC-0005,Pinecrest Family Dental,https://pinecrest-dental.example.com,555-0105,Spokane,WA,US,Dental,Prospect,HS-1005,CZ-2005
+ACC-0006,Northgate Multi-Specialty Clinic,https://northgate-clinic.example.com,555-0106,Columbus,OH,US,Multi-Specialty,Prospect,HS-1006,
+ACC-0007,Willow Creek Chiropractic,https://willowcreek-chiro.example.com,555-0107,Austin,TX,US,Chiropractic,Prospect,HS-1007,
+ACC-0008,Bayview Dental Studio,,,Tampa,FL,US,Dental,Prospect,HS-1008,
+ACC-0009,Cedar Ridge Physical Therapy,https://cedarridge-pt.example.com,555-0109,Asheville,NC,US,,Prospect,,
+ACC-0010,Lakeside Dental Group LLC,https://lakeside-dental.example.com,555-0101,Madison,WI,US,Dental,Prospect,,

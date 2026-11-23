@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Zuora Subscription (Simulated)</label>
+    <pluralLabel>Zuora Subscriptions (Simulated)</pluralLabel>
+    <description>SIMULATED stand-in for Zuora's own subscription record, written by StubBillingAdapter. Not Salesforce data: edit a record to simulate a change made directly in Zuora; nightly reconciliation flags the drift.</description>
+    <nameField><label>Subscription Number</label><type>Text</type></nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>Private</sharingModel>
+    <externalSharingModel>Private</externalSharingModel>
+    <enableActivities>false</enableActivities>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableBulkApi>true</enableBulkApi>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+</CustomObject>

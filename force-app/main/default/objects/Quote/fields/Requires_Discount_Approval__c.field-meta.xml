@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Requires_Discount_Approval__c</fullName><label>Requires Discount Approval</label><description>Entry criterion for the discount approval process.</description><formula>Max_Line_Discount__c &gt; $CustomMetadata.Q2C_Setting__mdt.Default.Discount_Approval_Threshold__c</formula><formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs><type>Checkbox</type><securityClassification>Internal</securityClassification></CustomField>

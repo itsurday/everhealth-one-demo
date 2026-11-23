@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Subscription_Number__c</fullName><label>Subscription Number</label><description>Zuora subscription number (simulated). Not required at field level: billing sync always sets it, and a required field would be forced onto the layout next to Name (same value).</description><length>50</length><type>Text</type><required>false</required><securityClassification>Internal</securityClassification></CustomField>

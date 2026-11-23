@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Retry_Billing_Sync</name>
+        <label>Retry Billing Sync</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <actionName>BillingSyncService</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Result_Screen</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>logId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>BillingSyncService</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>65.0</apiVersion>
+    <description>Operator retry for a failed billing sync (STA §3.4). UI only: BillingSyncService.retry owns the logic and checks the EH_Retry_Integration custom permission server-side, so non-operators land on the error screen.</description>
+    <environments>Default</environments>
+    <interviewLabel>EH Integration Retry {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EH Integration Retry</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_Log</name>
+        <label>Get Log</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Confirm_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Integration_Log__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Status__c</queriedFields>
+        <queriedFields>Attempt_Count__c</queriedFields>
+        <queriedFields>Error_Category__c</queriedFields>
+        <queriedFields>Sanitized_Error__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>Confirm_Screen</name>
+        <label>Confirm Retry</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Retry_Billing_Sync</targetReference>
+        </connector>
+        <fields>
+            <name>Confirm_Text</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;{!Get_Log.Name}&lt;/strong&gt; is &lt;strong&gt;{!Get_Log.Status__c}&lt;/strong&gt; after {!Get_Log.Attempt_Count__c} attempt(s).&lt;/p&gt;&lt;p&gt;{!Get_Log.Sanitized_Error__c}&lt;/p&gt;&lt;p&gt;Retry reuses the same idempotency key, so billing (simulated Zuora) can&apos;t create a duplicate subscription. Fix the cause first for Validation or Authentication errors.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Retry now</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Error_Screen</name>
+        <label>Retry Not Allowed</label>
+        <locationX>440</locationX>
+        <locationY>458</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Error_Text</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Retry was not queued.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Result_Screen</name>
+        <label>Retry Result</label>
+        <locationX>176</locationX>
+        <locationY>458</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Result_Text</name>
+            <fieldText>&lt;p&gt;{!Retry_Billing_Sync.message}&lt;/p&gt;&lt;p&gt;Refresh the log in a few seconds to see the new attempt.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Log</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

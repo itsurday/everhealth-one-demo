@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Source_Subscription_Required</fullName><active>true</active><errorConditionFormula>(RecordType.DeveloperName = 'Amendment' || RecordType.DeveloperName = 'Renewal') &amp;&amp; ISBLANK(Source_Subscription__c)</errorConditionFormula><errorDisplayField>Source_Subscription__c</errorDisplayField><errorMessage>Amendment and Renewal opportunities need a Source Subscription.</errorMessage></ValidationRule>

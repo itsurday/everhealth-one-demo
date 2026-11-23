@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Renewal_Key__c</fullName><label>Renewal Key</label><description>&lt;Subscription_Key__c&gt;:&lt;Term_End_Date__c&gt;. Makes the renewal generator idempotent.</description><length>120</length><type>Text</type><externalId>true</externalId><unique>true</unique><caseSensitive>false</caseSensitive><securityClassification>Internal</securityClassification></CustomField>

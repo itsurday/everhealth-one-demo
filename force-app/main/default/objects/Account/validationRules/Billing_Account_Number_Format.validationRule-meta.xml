@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Billing_Account_Number_Format</fullName><active>true</active><errorConditionFormula>NOT(ISBLANK(Billing_Account_Number__c)) &amp;&amp; NOT(REGEX(Billing_Account_Number__c, 'A[0-9]{8}'))</errorConditionFormula><errorDisplayField>Billing_Account_Number__c</errorDisplayField><errorMessage>Billing Account Number must look like A12345678.</errorMessage></ValidationRule>

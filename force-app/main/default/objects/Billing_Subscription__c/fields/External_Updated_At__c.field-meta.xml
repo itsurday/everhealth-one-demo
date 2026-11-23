@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>External_Updated_At__c</fullName><label>External Updated At</label><description>Source event timestamp. Older events are ignored.</description><type>DateTime</type><securityClassification>Internal</securityClassification></CustomField>

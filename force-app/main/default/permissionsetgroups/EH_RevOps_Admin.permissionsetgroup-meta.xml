@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata"><description>RevOps admin bundle: Sales Manager + Billing Viewer + Integration Operator.</description><label>EH RevOps Admin</label><permissionSets>EH_Sales_Manager</permissionSets><permissionSets>EH_Billing_Viewer</permissionSets><permissionSets>EH_Integration_Operator</permissionSets><status>Updated</status></PermissionSetGroup>

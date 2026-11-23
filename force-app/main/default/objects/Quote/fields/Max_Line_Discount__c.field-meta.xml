@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Max_Line_Discount__c</fullName><label>Max Line Discount</label><description>Highest line discount on the quote.</description><summarizedField>QuoteLineItem.Discount</summarizedField><summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey><summaryOperation>max</summaryOperation><type>Summary</type><securityClassification>Confidential</securityClassification></CustomField>

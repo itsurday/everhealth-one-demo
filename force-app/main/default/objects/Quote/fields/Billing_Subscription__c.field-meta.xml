@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Billing_Subscription__c</fullName><label>Billing Subscription</label><description>Subscription created by billing sync (simulated).</description><referenceTo>Billing_Subscription__c</referenceTo><relationshipName>Quotes</relationshipName><relationshipLabel>Quotes</relationshipLabel><deleteConstraint>SetNull</deleteConstraint><type>Lookup</type><securityClassification>Internal</securityClassification></CustomField>

@@ -1,0 +1,28 @@
+# Salesforce
+.sf/
+.sfdx/
+.localdevserver/
+**/authinfo*.json
+*.key
+*.pem
+.env
+.env.*
+
+# Tooling
+node_modules/
+.vscode/
+.idea/
+coverage/
+*.log
+
+# Local Claude settings (may hold secrets)
+.claude/settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+

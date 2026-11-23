@@ -1,0 +1,16 @@
+Lead_Key__c,FirstName,LastName,Company,Email,Status,LeadSource,HubSpot_Lifecycle_Stage__c,Practice_Type__c,HubSpot_Contact_Id__c
+LEAD-0001,Alex,Marchetti,Brightside Dental,alex.marchetti@example.com,Open - Not Contacted,Web,Subscriber,Dental,HSL-4001
+LEAD-0002,Robin,Achterberg,Keystone Chiropractic,robin.achterberg@example.com,Open - Not Contacted,Web,Lead,Chiropractic,HSL-4002
+LEAD-0003,Cameron,Duval,Evergreen PT Partners,cameron.duval@example.com,Working - Contacted,Partner Referral,MQL,Physical Therapy,HSL-4003
+LEAD-0004,Devon,Ishikawa,Clearwater Behavioral,devon.ishikawa@example.com,Working - Contacted,Web,MQL,Behavioral Health,HSL-4004
+LEAD-0005,Elliot,Branagh,Maple Grove Dental,elliot.branagh@example.com,Working - Contacted,Trade Show,SQL,Dental,HSL-4005
+LEAD-0006,Frankie,Osei,Granite Peak Chiropractic,frankie.osei@example.com,Open - Not Contacted,Web,Lead,Chiropractic,HSL-4006
+LEAD-0007,Gale,Thornbury,Silverline Multi-Specialty,gale.thornbury@example.com,Working - Contacted,Phone Inquiry,SQL,Multi-Specialty,HSL-4007
+LEAD-0008,Hollis,Kaur,Redwood Dental Care,hollis.kaur@example.com,Open - Not Contacted,Web,Subscriber,Dental,HSL-4008
+LEAD-0009,Indy,Laurent,Prairie Wind PT,indy.laurent@example.com,Closed - Not Converted,Web,Lead,Physical Therapy,HSL-4009
+LEAD-0010,Jessie,Novak,Oakmont Behavioral Health,jessie.novak@example.com,Working - Contacted,Partner Referral,MQL,Behavioral Health,HSL-4010
+LEAD-0011,Kai,Ferreira,Sunrise Family Dental,kai.ferreira@example.com,Open - Not Contacted,Trade Show,Lead,Dental,HSL-4011
+LEAD-0012,Lane,Whitaker,Ironwood Chiropractic,lane.whitaker@example.com,Working - Contacted,Web,SQL,Chiropractic,HSL-4012
+LEAD-0013,Marlowe,Adeyemi,Bluewater PT,marlowe.adeyemi@example.com,Open - Not Contacted,Web,Subscriber,Physical Therapy,HSL-4013
+LEAD-0014,Noel,Varga,Highland Dental Arts,noel.varga@example.com,Working - Contacted,Phone Inquiry,MQL,Dental,HSL-4014
+LEAD-0015,Oakley,Brennan,Lakeshore Multi-Specialty,oakley.brennan@example.com,Closed - Not Converted,Web,Lead,Multi-Specialty,HSL-4015

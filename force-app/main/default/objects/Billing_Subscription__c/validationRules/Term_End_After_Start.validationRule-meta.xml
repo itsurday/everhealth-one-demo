@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Term_End_After_Start</fullName><active>true</active><errorConditionFormula>NOT(ISBLANK(Term_End_Date__c)) &amp;&amp; NOT(ISBLANK(Term_Start_Date__c)) &amp;&amp; Term_End_Date__c &lt; Term_Start_Date__c</errorConditionFormula><errorDisplayField>Term_End_Date__c</errorDisplayField><errorMessage>Term End Date can't be before Term Start Date.</errorMessage></ValidationRule>

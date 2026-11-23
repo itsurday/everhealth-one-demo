@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Billing_Charge_Id__c</fullName><label>Billing Charge Id</label><description>Zuora product rate plan charge ID (simulated). Upsert key.</description><length>64</length><type>Text</type><externalId>true</externalId><unique>true</unique><caseSensitive>false</caseSensitive><securityClassification>Internal</securityClassification></CustomField>

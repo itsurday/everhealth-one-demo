@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>allInternalUsers</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>QuoteNumber</field>
+        <field>Max_Line_Discount__c</field>
+        <field>GrandTotal</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <description>Sales manager reviews discounts above Q2C_Setting__mdt.Default.Discount_Approval_Threshold__c. The submitter picks the approver (no fixed usernames in source).</description>
+        <label>Manager Review</label>
+        <name>Manager_Review</name>
+    </approvalStep>
+    <description>Q2C-04: quotes whose max line discount exceeds the CMDT threshold need manager approval before they can be accepted. The threshold is enforced by VR Approval_Required_Before_Accept (approval entry criteria can&apos;t read Custom Metadata), so entry is open to any non-accepted quote.</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>NOT(ISPICKVAL(Status, &apos;Accepted&apos;))</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>EH_Approval_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>EH_Quote_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>EH_Approval_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>EH_Quote_Status_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>EH_Approval_Pending</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>EH Quote Discount Approval</label>
+    <recallActions>
+        <action>
+            <name>EH_Approval_Recalled</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Source_Subscription__c</fullName><label>Source Subscription</label><description>Subscription being amended or renewed. Required for Amendment/Renewal.</description><referenceTo>Billing_Subscription__c</referenceTo><relationshipName>Opportunities</relationshipName><relationshipLabel>Opportunities</relationshipLabel><deleteConstraint>SetNull</deleteConstraint><type>Lookup</type><securityClassification>Internal</securityClassification></CustomField>

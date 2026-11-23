@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>External_Event_Key__c</fullName><label>External Event Key</label><description>Idempotency key: SF:QUOTE_SYNC:&lt;QuoteId&gt; or &lt;source&gt;:&lt;eventId&gt;.</description><length>255</length><type>Text</type><externalId>true</externalId><unique>true</unique><caseSensitive>true</caseSensitive><securityClassification>Internal</securityClassification></CustomField>

@@ -1,0 +1,9 @@
+{
+  "FirstName": "Sam",
+  "LastName": "Sales (demo)",
+  "Alias": "ssales",
+  "Email": "sam.sales@example.com",
+  "profileName": "Standard User",
+  "permsets": ["EH_Sales_User"],
+  "generatePassword": true
+}

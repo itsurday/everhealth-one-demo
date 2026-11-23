@@ -1,0 +1,7 @@
+Billing_Charge_Id__c,Name,ProductCode,IsActive,Charge_Type__c,Charge_Model__c,Billing_Period__c,Unit_Of_Measure__c,Description
+ZSIM-PLAT-BASE,Practice Platform - Base,PLAT-BASE,true,Recurring,Flat Fee,Month,Practice,Core practice-management platform (simulated Zuora rate plan charge)
+ZSIM-PROV-SEAT,Provider Seat,PROV-SEAT,true,Recurring,Per Unit,Month,Provider,Per-provider license
+ZSIM-ECLAIMS,E-Claims Processing,ECLAIMS,true,Usage,Tiered,Month,Claim,Usage-based claims submission (tiered)
+ZSIM-ONBOARD,Onboarding & Data Migration,ONBOARD,true,One-Time,Flat Fee,,Project,One-time implementation fee
+ZSIM-PORTAL,Patient Portal Add-on,PORTAL,true,Recurring,Flat Fee,Month,Practice,Patient self-service portal add-on
+ZSIM-ANALYTICS,Practice Analytics (Annual),ANALYTICS,true,Recurring,Flat Fee,Annual,Practice,Annual analytics subscription

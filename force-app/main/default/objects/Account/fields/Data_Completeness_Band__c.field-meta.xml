@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Data_Completeness_Band__c</fullName><label>Data Completeness Band</label><description>Grouping for the Data Quality dashboard.</description><formula>IF(Data_Completeness__c = 1, "Complete", IF(Data_Completeness__c &gt;= 0.6, "Partial", "Poor"))</formula><formulaTreatBlanksAs>BlankAsBlank</formulaTreatBlanksAs><type>Text</type><securityClassification>Internal</securityClassification></CustomField>

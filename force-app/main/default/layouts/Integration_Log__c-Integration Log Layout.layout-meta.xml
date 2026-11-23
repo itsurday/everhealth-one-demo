@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layoutSections>
+        <customLabel>false</customLabel>
+        <detailHeading>false</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Information</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Name</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>OwnerId</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsTopToBottom</style>
+    </layoutSections><layoutSections><customLabel>true</customLabel><detailHeading>true</detailHeading><editHeading>true</editHeading><label>EverHealth One</label><layoutColumns><layoutItems><behavior>Readonly</behavior><field>Direction__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Source_System__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Target_System__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Event_Type__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>External_Event_Id__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>External_Event_Key__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Correlation_Id__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Related_Account__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Related_Quote__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Related_Subscription__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Status__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Attempt_Count__c</field></layoutItems></layoutColumns><layoutColumns><layoutItems><behavior>Readonly</behavior><field>Last_Attempt_At__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Next_Retry_At__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Completed_At__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>HTTP_Status__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Duration_Ms__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Error_Category__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Sanitized_Error__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Payload_Hash__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Duplicate_Count__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Last_Duplicate_At__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Retried_By__c</field></layoutItems><layoutItems><behavior>Readonly</behavior><field>Reconciliation_Status__c</field></layoutItems></layoutColumns><style>TwoColumnsTopToBottom</style></layoutSections>
+    <layoutSections>
+        <customLabel>false</customLabel>
+        <detailHeading>false</detailHeading>
+        <editHeading>true</editHeading>
+        <label>System Information</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CreatedById</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>LastModifiedById</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsTopToBottom</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>false</customLabel>
+        <detailHeading>false</detailHeading>
+        <editHeading>true</editHeading>
+        <layoutColumns/>
+        <layoutColumns/>
+        <layoutColumns/>
+        <style>CustomLinks</style>
+    </layoutSections>
+    <platformActionList><actionListContext>Record</actionListContext><platformActionListItems><actionName>Integration_Log__c.Retry_Sync</actionName><actionType>QuickAction</actionType><sortOrder>0</sortOrder></platformActionListItems></platformActionList>
+    <showEmailCheckbox>false</showEmailCheckbox>
+    <showHighlightsPanel>false</showHighlightsPanel>
+    <showInteractionLogPanel>false</showInteractionLogPanel>
+    <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
+    <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
+</Layout>

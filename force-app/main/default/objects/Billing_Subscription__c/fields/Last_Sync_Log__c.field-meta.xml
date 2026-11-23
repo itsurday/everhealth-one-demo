@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Last_Sync_Log__c</fullName><label>Last Sync Log</label><referenceTo>Integration_Log__c</referenceTo><relationshipName>Billing_Subscriptions</relationshipName><relationshipLabel>Billing Subscriptions</relationshipLabel><deleteConstraint>SetNull</deleteConstraint><type>Lookup</type><securityClassification>Internal</securityClassification></CustomField>

@@ -1,0 +1,19 @@
+{
+  "orgName": "EverHealth One Demo",
+  "edition": "Enterprise",
+  "hasSampleData": false,
+  "features": [
+    "EnableSetPasswordInApi"
+  ],
+  "settings": {
+    "quoteSettings": {
+      "enableQuote": true
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "deploymentSettings": {
+      "doesSkipAsyncApexValidation": true
+    }
+  }
+}

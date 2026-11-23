@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Billing_Period__c</fullName><label>Billing Period</label><description>Shown on the Quote Template.</description><formula>TEXT(Product2.Billing_Period__c)</formula><formulaTreatBlanksAs>BlankAsBlank</formulaTreatBlanksAs><type>Text</type><securityClassification>Public</securityClassification></CustomField>
